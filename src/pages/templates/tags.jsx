@@ -42,8 +42,10 @@ const SubInfo = styled.div`
   font-family: ${Styles.FONT_FAMILY.EN};
   font-size: ${Styles.FONT_SIZE.SMALL}px;
   color: ${Styles.COLOR.LIGHTGLAY};
-  margin: 0px;
-  margin-bottom: 10px;
+  margin: 0px 0px 8px 0px;
+  ${Responsive("sm")} {
+    margin-bottom: 4px;
+  }
 `
 
 const Description = styled.div`
@@ -181,7 +183,7 @@ export const pageQuery = graphql`
           fields {
             slug
           }
-          excerpt(truncate: true, pruneLength: 60)
+          excerpt(truncate: true, pruneLength: 90)
         }
       }
     }

@@ -11,7 +11,7 @@ const Articles = styled.div`
   padding: 0;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 30px;
+  margin: 0 0 30px 0;
   ${Responsive("md")} {
     justify-content: space-around;
     padding:4px 0;

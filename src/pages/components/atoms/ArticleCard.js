@@ -34,6 +34,7 @@ const Pict = styled.div`
     height: 100%;
     padding: 4px;
     box-sizing: border-box;
+
 `;
 
 const Title = styled.h4`
