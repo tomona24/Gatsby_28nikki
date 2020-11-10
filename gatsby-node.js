@@ -57,7 +57,6 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
-  console.log(result.data.categoriesAllMarkdownRemark.group)
 
    result.data.categoriesAllMarkdownRemark.group.forEach(({ category }) => {
      createPage({
