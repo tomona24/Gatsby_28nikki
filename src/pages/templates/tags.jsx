@@ -7,6 +7,7 @@ import ArticleCard from "../components/atoms/ArticleCard"
 import SideBlogList from "../components/atoms/SideBlogList"
 import Pankuzu from "../components/atoms/Pankuzu"
 import SEO from "../components/seo"
+import Button from "../components/atoms/Button"
 
 const Card = styled.div`
   width: 240px;
@@ -22,7 +23,7 @@ const Article = styled.div`
 
 const HeadArticle = styled.div`
   display: flex;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 `
 
 const Info = styled.div`
@@ -32,6 +33,9 @@ const Info = styled.div`
   justify-content: flex-start;
   height: 70px;
   box-sizing: border-box;
+  ${Responsive("sm")} {
+    width: 50%;
+  }
 `
 
 const SubInfo = styled.div`
@@ -49,6 +53,18 @@ const Description = styled.div`
   ${Responsive("sm")} {
     font-size: ${Styles.FONT_SIZE.SMALL}px;
   }
+`
+
+const Title = styled.div`
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
 `
 
 export default ({
@@ -98,6 +114,9 @@ export default ({
           />
           <SideBlogList blogs={randomList} text1="ピック" text2="アップ" />
         </HeadArticle>
+        <Title>
+          <Button text1="過去の" text2="記事" type="SECONDARY" />
+        </Title>
         {blogs
           .slice(1, blogs.length)
           .map(

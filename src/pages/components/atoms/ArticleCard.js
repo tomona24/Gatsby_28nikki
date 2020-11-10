@@ -12,7 +12,7 @@ const Card = styled.div`
   text-decoration: none;
   font-weight: 800;
   font-size: ${Styles.FONT_SIZE.MIDDLE}px;
-  width: 240px;
+  width: 230px;
   height: 180px;
   margin: 0px 16px 32px 0px;
   padding: 0;
@@ -24,8 +24,9 @@ const Card = styled.div`
   }
 
   ${Responsive("md")} {
-    margin: 0px 0px 32px 0px;
+    margin: 0px 0px 8px 0px;
   }
+
 `;
 
 const Pict = styled.div`
@@ -48,7 +49,6 @@ const Title = styled.h4`
       background-color: rgba(250,250,250,0.8);
       padding: 2px 1px;
       transition: .3s;
-
     }
 `;
 
@@ -82,9 +82,8 @@ const CardSeveral = styled(Card)`
     right: 3px;
   }
 
-    
   ${Responsive("md")} {
-    margin: 0px 0px 32px 4px;
+    margin: 0px 0px 0px 4px;
   }
 
 `;
@@ -92,13 +91,11 @@ const CardSeveral = styled(Card)`
  const CardLarge = styled(Card)`
     font-size: ${Styles.FONT_SIZE.HEADER}px;
     margin: 32px 0 100px 0;
-    max-width: ${BreakPoints.sm}px;
-    min-width: ${BreakPoints.sm}px;
+    width: ${BreakPoints.sm}px;
     height: ${BreakPoints.sm/3*2}px;
     ${Responsive("md")} {
-      max-width: 100%;
-      min-width: 100%;
-      height: 100%;
+      width: 100%;
+      margin: 32px 0 40px 0;
     }
     &:hover {
       span {
@@ -108,10 +105,10 @@ const CardSeveral = styled(Card)`
  `;
 
  const PictLarge = styled.div`
-    max-width: ${BreakPoints.sm}px;
+    width: ${BreakPoints.sm}px;
     height: ${BreakPoints.sm/3*2}px;
     ${Responsive("md")} {
-      max-width: 100%;
+      width: 100%;
     }
     ${Responsive("sm")} {
       height: 300px;

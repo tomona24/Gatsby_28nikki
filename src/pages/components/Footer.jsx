@@ -16,15 +16,7 @@ const Footer = styled.footer`
   color: ${Styles.COLOR.LIGHTGLAY};
   font-size: ${Styles.FONT_SIZE.SMALL} px;
   text-align: center;
-  ul {
-    display: flex;
-    width: 100%;
-    margin: 8px;
-    justify-content: center;
-  }
-  li {
-    margin: 0 8px;
-    }
+
   }  
 `;
 
@@ -43,17 +35,31 @@ const Copy = styled.p`
   font-size: ${Styles.FONT_SIZE.DEFAULT}px;
 `
 
+const Navi = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 8px;
+  justify-content: center;
+  li {
+    margin: 0 8px;
+    }
+  ${Responsive("lg")} {
+    font-size: ${Styles.FONT_SIZE.DEFAULT}px;
+  }
+`
+
 export default () => (
   <Footer>
       <Upper>
         <ToTop onClick={() => scrollTo('html')}><FontAwesomeIcon icon={['fas', 'arrow-circle-up']} /> TOPに戻る</ToTop>
       </Upper>
-    <ul>
+    <Navi>
       <li><Link to="profile">プロフィール</Link></li>
       {/* <li><Link to="contact">お問い合わせ</Link></li> */}
       <li>お問い合わせ</li>
       <li><Link to="privacy-policy">プライバシーポリシー</Link></li>
-    </ul>
+    </Navi>
     <Copy>Copyright © 2018 ニッパチニッキ All Rights Reserved.</Copy>
   </Footer>
 )
