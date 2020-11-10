@@ -22,10 +22,9 @@ const Card = styled.div`
       color: ${Styles.COLOR.SECONDARY};
     }
   }
-
   ${Responsive("md")} {
     margin: 0px 0px 8px 0px;
-    width: 180px;
+    width: 45%;
     height: 140px;
   }
 
