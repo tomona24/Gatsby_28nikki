@@ -5,6 +5,7 @@ import styled from "styled-components"
 import { Styles, Responsive } from "../../styles/style"
 import ArticleCard from "../components/atoms/ArticleCard"
 import SideBlogList from "../components/atoms/SideBlogList"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Pankuzu from "../components/atoms/Pankuzu"
 import SEO from "../components/seo"
 import Button from "../components/atoms/Button"
@@ -143,7 +144,7 @@ export default ({
                     />
                   </Card>
                   <Info>
-                    <SubInfo>{date}</SubInfo>
+                    <SubInfo><FontAwesomeIcon icon={["far", "clock"]} /> {date}</SubInfo>
                     <Description>{excerpt}</Description>
                   </Info>
                 </Article>

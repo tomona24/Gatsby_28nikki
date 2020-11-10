@@ -151,8 +151,6 @@ export default ({
                     </SubInfo>
                     <Description>
                       {excerpt}
-                      <br />
-                      <br /> &gt;&gt;続きはこちら
                     </Description>
                   </Info>
                 </Article>

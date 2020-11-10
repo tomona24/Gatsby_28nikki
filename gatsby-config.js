@@ -20,11 +20,19 @@ module.exports = {
     twitterUsername: ``
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "GOOGLE_ANALYTICS_TRACKING_ID",
+        head: true,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`, 
     `gatsby-plugin-smoothscroll`,
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -46,12 +54,12 @@ module.exports = {
         path: path.join(__dirname, `src`, `images`)
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-google-adsense`,
-    //   options: {
-    //       publisherId: `ca-pub-3602297049510061`
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-google-adsense`,
+      options: {
+          publisherId: `ca-pub-3602297049510061`
+      },
+    },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
