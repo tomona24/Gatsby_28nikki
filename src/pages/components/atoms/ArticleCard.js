@@ -25,6 +25,8 @@ const Card = styled.div`
 
   ${Responsive("md")} {
     margin: 0px 0px 8px 0px;
+    width: 180px;
+    height: 140px;
   }
 
 `;
