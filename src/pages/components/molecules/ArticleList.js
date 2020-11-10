@@ -13,10 +13,8 @@ const Articles = styled.div`
   width: 100%;
   margin-bottom: 30px;
   ${Responsive("md")} {
-    justify-content: center;
-  }
-  ${Responsive("sm")} {
-    justify-content: space-between;
+    justify-content: space-around;
+    padding:4px 0;
   }
 `
 

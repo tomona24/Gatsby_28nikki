@@ -14,12 +14,12 @@ const Article = styled.div`
   display: flex;
   width: 100%;
   margin: 16px 0;
-  padding: 0;g
+  padding: 0;
 `
 
 const HeadArticle = styled.div`
   display: flex;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 `
 const Card = styled.div`
   width: 240px;
@@ -33,6 +33,9 @@ const Info = styled.div`
   justify-content: flex-start;
   height: 70px;
   box-sizing: border-box;
+  ${Responsive("sm")} {
+    width: 50%;
+  }
 `
 
 const SubInfo = styled.div`

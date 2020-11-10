@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from 'styled-components'
-import { Styles } from '../../../styles/style';
+import { Styles, Responsive } from '../../../styles/style';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {categoryMap} from "../../../styles/maps"
 
@@ -10,7 +10,9 @@ const PankuzuList = styled.ul`
   justify-content: flex-start;
   width: 100%;
   margin: 8px 0 0;
-
+  ${Responsive("md")} {
+    flex-direction: column;
+  }
 `
 const Item = styled.li`
   color: ${Styles.COLOR.LIGHTGLAY};

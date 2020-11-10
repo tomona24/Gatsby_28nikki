@@ -5,11 +5,11 @@ import { Styles, Responsive } from '../../../styles/style';
 import { categoryMap } from '../../../styles/maps';
 
 const NavList = styled.ul`
-display: flex;
-width: 100%;
-justify-content: flex-end;
-margin: 0;
-padding: 0;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
   ${Responsive("md")} {
     flex-wrap: wrap;
   }
@@ -32,7 +32,7 @@ li {
   ${Responsive("sm")} {
     transition: 0s;
     min-width: 90px;
-    padding: 8px 4px;
+    padding: 8px 0px 4px;
     font-size: ${Styles.FONT_SIZE.DEFAULT}px;
   }
 }

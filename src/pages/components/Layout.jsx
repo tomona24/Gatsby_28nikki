@@ -16,8 +16,10 @@ body {
   background: #f5f7f4;
   color: ${Styles.COLOR.DARK};
   font-family: ${Styles.FONT_FAMILY.JP_SAWARABI};
-  margin: 0;
-  padding: 0 8px; 
+  margin: 0 auto;
+  padding: 4px 8px;
+  width: 98%; 
+  height: 100%;
 }
 
 a {
@@ -28,6 +30,7 @@ a {
       color: ${Styles.COLOR.SECONDARY};
     }
   }
+
 ul {
   padding-left: 0;
   list-style: none;
@@ -46,7 +49,7 @@ li {
 
 export default ({ page = "default", children }) => (
     <React.Fragment>
-      <GlobalStyle theme="purple" />
+      <GlobalStyle />
       <Header page={page} />
       <Main>{children}</Main>
       <Footer />
