@@ -3,7 +3,6 @@ import { Link } from "gatsby"
 import Img from "gatsby-image"
 import styled from 'styled-components'
 import { Styles, BreakPoints, Responsive } from '../../../styles/style'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Card = styled.div`
   display: block;
@@ -133,15 +132,18 @@ const SubInfo = styled.div`
     color: ${Styles.COLOR.LIGHTGLAY};
     margin-right: 16px;
     width: 130px;
+    span {
+      font-family: 'Material Icons';
+      font-size: 1.1em;
+      vertical-align: text-top;
+    }
 `;
 
 const Description = styled.div`
     width: 100%;
     color: ${Styles.COLOR.LIGHTGLAY};
-    font-size: ${Styles.FONT_SIZE.MIDDLE}px;
-    ${Responsive("sm")} {
-      font-size: ${Styles.FONT_SIZE.SMALL}px;
-    }
+    font-size: .9rem;
+    font-weight: 400;
 `;
 
 
@@ -224,7 +226,7 @@ const ArticleCardLarge = (props) => {
         </PictLarge>
         </Link>
         <Info>
-            <SubInfo><FontAwesomeIcon icon={['far', 'clock']} /> {date}</SubInfo>
+            <SubInfo><span>query_builder</span> {date}</SubInfo>
             <Description>{text}</Description>
         </Info>
     </CardLarge>

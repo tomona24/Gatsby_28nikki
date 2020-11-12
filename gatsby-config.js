@@ -32,7 +32,15 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`, 
     `gatsby-plugin-smoothscroll`,
-
+    {
+      resolve: 'gatsby-plugin-google-fonts',
+      options: {
+        fonts: [
+          'material icons',
+          'roboto:300,400,500,700',
+        ],
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

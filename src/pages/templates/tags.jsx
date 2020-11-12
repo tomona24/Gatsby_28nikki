@@ -5,7 +5,6 @@ import styled from "styled-components"
 import { Styles, Responsive } from "../../styles/style"
 import ArticleCard from "../components/atoms/ArticleCard"
 import SideBlogList from "../components/atoms/SideBlogList"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Pankuzu from "../components/atoms/Pankuzu"
 import SEO from "../components/seo"
 import Button from "../components/atoms/Button"
@@ -47,14 +46,19 @@ const SubInfo = styled.div`
   ${Responsive("sm")} {
     margin-bottom: 4px;
   }
+  span {
+    font-family: 'Material Icons';
+    font-size: 1.1em;
+    vertical-align: text-top;
+  }
 `
 
 const Description = styled.div`
   width: 100%;
   color: ${Styles.COLOR.LIGHTGLAY};
-  font-size: ${Styles.FONT_SIZE.MIDDLE}px;
+  font-size: .9rem;
   ${Responsive("sm")} {
-    font-size: ${Styles.FONT_SIZE.SMALL}px;
+    font-size: .8rem;
   }
 `
 
@@ -144,7 +148,7 @@ export default ({
                     />
                   </Card>
                   <Info>
-                    <SubInfo><FontAwesomeIcon icon={["far", "clock"]} /> {date}</SubInfo>
+                    <SubInfo><span>query_builder</span> {date}</SubInfo>
                     <Description>{excerpt}</Description>
                   </Info>
                 </Article>

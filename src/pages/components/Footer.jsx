@@ -2,7 +2,6 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from 'styled-components'
 import { Styles, BreakPoints, Responsive } from '../../styles/style'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 
 const Footer = styled.footer`
@@ -24,6 +23,12 @@ const Upper = styled.div`
   width: 100%;
   text-align: right;
   border-bottom: 1px solid ${Styles.COLOR.LIGHTGLAY};
+  span {
+    font-family: 'Material Icons';
+    font-size: 1em;
+    color: ${Styles.COLOR.DARK};
+    vertical-align: middle;
+  }
 `
 
 const ToTop = styled.a`
@@ -52,7 +57,7 @@ const Navi = styled.ul`
 export default () => (
   <Footer>
       <Upper>
-        <ToTop onClick={() => scrollTo('html')}><FontAwesomeIcon icon={['fas', 'arrow-circle-up']} /> TOPに戻る</ToTop>
+        <span>arrow_circle_up</span><ToTop onClick={() => scrollTo('html')}>TOPに戻る</ToTop>
       </Upper>
     <Navi>
       <li><Link to="profile">プロフィール</Link></li>

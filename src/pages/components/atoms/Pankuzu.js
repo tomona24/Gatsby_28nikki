@@ -2,7 +2,6 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from 'styled-components'
 import { Styles, Responsive } from '../../../styles/style';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {categoryMap} from "../../../styles/maps"
 
 const PankuzuList = styled.ul`
@@ -16,10 +15,16 @@ const PankuzuList = styled.ul`
 `
 const Item = styled.li`
   color: ${Styles.COLOR.LIGHTGLAY};
-  font-size: ${Styles.FONT_SIZE.SMALL}px;
+  font-size: .8em;
   a {
       padding-right: 4px;
       padding-left: 4px;
+  }
+  span {
+    font-family: 'Material Icons';
+    font-size: 1.1rm;
+    color: ${Styles.COLOR.DARK};
+    vertical-align: text-top;
   }
 `
 const Pankuzu = (props) => {
@@ -42,16 +47,16 @@ const Pankuzu = (props) => {
     return (
             <PankuzuList>
             <Item>
-                <Link to="/"><FontAwesomeIcon icon={['fas', 'map-marker-alt']} /> TOP</Link>
+                <span>place</span><Link to="/">TOP</Link>
             </Item>
             {middle ?
                 <Item>
-                      &gt; <Link to={`/${createPath(type)}`} >{createName(type)}</Link>
+                      <span>chevron_right</span><Link to={`/${createPath(type)}`} >{createName(type)}</Link>
                 </Item> : ""
             }
             {article ? 
                     <Item>
-                         &gt; <Link to={`${article.to}`}>{article.name}</Link> 
+                         <span>chevron_right</span><Link to={`${article.to}`}>{article.name}</Link> 
                     </Item>
                     : ""
                 }
